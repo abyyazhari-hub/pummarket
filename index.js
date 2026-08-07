@@ -1,8 +1,10 @@
 require("dotenv").config();
 
-console.log("================================");
-console.log("      PUMMARKET.ID BOT");
-console.log("================================");
-console.log("Bot Starting...");
-console.log("Store :", process.env.STORE_NAME);
-console.log("Owner :", process.env.OWNER_NAME);
+const logger = require("./src/lib/logger");
+const startBot = require("./src/whatsapp/connection");
+
+logger.info("================================");
+logger.info("PUMMARKET.ID BOT");
+logger.info("================================");
+
+startBot();
